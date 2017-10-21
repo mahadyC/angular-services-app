@@ -1,0 +1,23 @@
+<h3>{{bunchesStore.name}} Store</h3>
+
+<ul class="row bricksList">
+  <li id="BaB-{{size}}" class="col-sm-3 well brick-{{size}}" ng-repeat="(size, brick) in bunchesStore.redBricks">
+    <p>Size: Red {{size}}</p>
+    <p>Quantity: <span class="quantity">{{brick.quantity}}</span></p>
+    <p>Price: {{brick.price}}</p>
+    <button ng-click="bunchesStore.reduce(brick); bunchesStore.addToCartRedBricks(size, brick.price)">Add to Cart</button>
+  </li>
+  <li id="BaB-{{size}}" class="col-sm-3 well brick-{{size}}" ng-repeat="(size, brick) in bunchesStore.blueBricks">
+    <p>Size: Blue {{size}}</p>
+    <p>Quantity: <span class="quantity">{{brick.quantity}}</span></p>
+    <p>Price: {{brick.price}}</p>
+    <button ng-click="bunchesStore.reduce(brick); bunchesStore.addToCartBlueBricks(size, brick.price)">Add to Cart</button>
+  </li>
+  <li id="BaB-{{size}}" class="col-sm-3 well brick-{{size}}" ng-repeat="(size, brick) in bunchesStore.greenBricks">
+    <p>Size: Green {{size}}</p>
+    <p>Quantity: <span class="quantity">{{brick.quantity}}</span></p>
+    <p>Price: {{brick.price}}</p>
+    <button ng-click="bunchesStore.reduce(brick); bunchesStore.addToCartGreenBricks(size, brick.price) ">Add to Cart</button>
+  </li>
+</ul>
+
